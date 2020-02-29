@@ -34,7 +34,7 @@
         <div v-for="index in 10" :key="index">
             <!-- senderhai -->
         <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
-            <div class="sender-name">name</div>
+            <div class="sender-name">name :</div>
 
             jatinda.kjvdajsvasvkhasvads
             
@@ -42,7 +42,7 @@
 
         <!-- reciver -->
         <div class="receiver-box   ml-5 py-2 pr-5 pl-5"> 
-            <div class="receiver-name">name</div>
+            <div class="receiver-name">name :</div>
             djasldhaksgd
             </div>
         </div>
@@ -74,7 +74,7 @@ export default {
 @import "../assets/colors.css";
 
 .chat-message{
-       position: fixed;                  /* added */
+   position: fixed;                  /* added */
    bottom:0;                           /* added */
    left:0; 
    width:100%;
@@ -93,7 +93,7 @@ export default {
     height: 100vh;
     width: 100%;
     overflow-y: scroll;
-    background-color: green;
+    background-color: whitesmoke;
     overflow: auto;
     padding-bottom: 30vh;
     padding-bottom: 30vh;
@@ -102,15 +102,16 @@ export default {
 .sender-box{
 
     margin-top: 10px;
-    border: 2px solid red;
+    color: white;
     float: right;
     text-align: right;
     border-radius: 20px;
     margin-left: 100% !important;
+    background-image: linear-gradient(to right, #32C788 0%, #38f9d7 100%);;
 }
 .receiver-box{
     margin-top: 10px;
-    border: 2px solid red;
+    border: 1px solid #32C788;
     float: left;
     text-align: left;
     border-radius: 20px;

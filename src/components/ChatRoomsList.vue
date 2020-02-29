@@ -1,7 +1,7 @@
 <template>
     <v-card class="mt-5">
 
-                    <v-list>
+                  <v-list>
                               <v-subheader>Chat Rooms</v-subheader>
                                             <div v-for="room in rooms" :key="room.name">
 

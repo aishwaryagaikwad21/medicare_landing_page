@@ -6,17 +6,17 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure
 import ChatRoomsList from './components/ChatRoomsList';
 import DoctorsRegistration from './components/DoctorRegistrationForm'
 import Landing from './components/Landing';
-import UserRegistration from './components/UserRegistration'
 import UserDashboard from './components/UserDashboard';
 import { rtdbPlugin } from "vuefire";
+import store from "./store";
+
 import AdminDashboard from "./components/AdminDashboard"
 Vue.use(rtdbPlugin);
 import ChatRoom from './components/ChatRoom'
 import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 
 const  routes = [
-    { path: "/", component: UserRegistration },
-    { path: "/chatroom", component: ChatRoom},
+    { path: "/", component: Landing },
    
     {
       path: "/doctorsregistrations",
@@ -33,6 +33,9 @@ const  routes = [
     },
     {
       path : "/UserDashboard", component : UserDashboard
+    },
+    {
+      path : "/ChatRooms/:name", component : ChatRoom
     }
   ];
 Vue.use(VueRouter)
@@ -48,5 +51,6 @@ const router = new VueRouter({
 new Vue({
   vuetify,
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

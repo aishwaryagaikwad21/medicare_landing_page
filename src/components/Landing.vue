@@ -15,7 +15,7 @@
                     
                         </div>
                         <div v-if="this.displaycomponent == 'ur'">
-                    <UserRegister/>
+                    <UserRegister :hide="hide"/>
                         </div>
                     <div v-if="this.displaycomponent == 'dl'">
                     <DoctorLogin/>
@@ -150,6 +150,7 @@ export default {
             this.displaycomponent=type
             
         },
+        
         hide() {
             var hideblock =document.getElementById("myModal");
             hideblock.style.display="none"

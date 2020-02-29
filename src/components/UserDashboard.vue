@@ -1,13 +1,13 @@
 <template>
 <div>
     <v-app-bar class="primary-light removeMarginAndPadding" dense>
-        <v-toolbar-title>User3020</v-toolbar-title>
+        <v-toolbar-title>{{user}}</v-toolbar-title>
         <v-spacer>
 
         </v-spacer>
-        <v-btn class="mr-3 post-button">
+        <v-btn class="mr-3 post-button" @click="dialog=true">
             New Post
-            <v-icon @click="dialog=true">mdi-plus</v-icon>
+            <v-icon >mdi-plus</v-icon>
         </v-btn>
     </v-app-bar>
     <v-content class="removeMarginAndPadding">
@@ -60,7 +60,7 @@
                 </v-col>
             </v-row>
         </v-container>
-        <v-dialog v-model="dialog" v-if="dialog">
+        <v-dialog v-model="dialog">
             <v-card>
                 <v-card-title>
                             Add Post
@@ -110,7 +110,6 @@
 <script>
 import UserPostCard from './UserPostCard';
 import {db} from '../firebaseapp';
-
 import ChatRoomList from './ChatRoomsList';
 export default {
 
@@ -137,6 +136,14 @@ export default {
         { text: '25%' },
         { text: '0%' },],
     }),
+    created(){
+    if(this.$store.state.user.loggedIn === false)
+            this.$router.replace(`/`);
+    else 
+
+    this.user = this.$store.state.user.username;
+    console.log(this.$store.state);
+  },
     methods : {
         post : function(){
             console.log(this.posts);

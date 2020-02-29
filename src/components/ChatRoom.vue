@@ -8,7 +8,7 @@
     >
     
 
-      <v-toolbar-title class="display-1">Chat Room </v-toolbar-title>
+      <v-toolbar-title class="display-1">{{roomName}} </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -31,27 +31,29 @@
           <!-- <li v-for="index in 10" :key="index">
                 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, modi quia deserunt ratione molestias rem nesciunt, accusamus id reprehenderit porro, eveniet nobis dolor nihil mollitia odit doloribus pariatur quos.</div>
         </li> -->
-        <div v-for="index in 10" :key="index">
+        <!-- <div v-for="index in 10" :key="index"> -->
             <!-- senderhai -->
-        <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
+        <!-- <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
             <div class="sender-name">name :</div>
                 
                  <div class="real-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ea suscipit ullam vel itaque totam minima amet vero enim molestias. Architecto odit neque qui beatae exercitationem a fugiat illum fuga. </div>   
-            </div>
+            </div> -->
 
         <!-- reciver -->
-        <div class="receiver-box   ml-5 py-2 pr-5 pl-5"> 
-            <div class="receiver-name">name :</div>
-            <div class="real-message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia eos itaque hic corporis ipsam! Architecto ipsam exercitationem quas dignissimos unde provident. Molestias modi fugit illo? Officia est excepturi ipsa velit?</div>   
+       
+        <div v-for="chat in chats" :key="chat.message">
+                        
+            <UserChatCard :sent_by="chat.sent_by" :message="chat.message" :username="username"/>
             </div>
-        </div>
     </div>
 
        
 
     <v-form     class="chat-message  "> 
         <v-container fluid>
-            <v-text-field
+            <v-row>
+                <v-col cols="11">
+  <v-text-field
                 v-model="message2"
                 solo
                 label="Enter Message"
@@ -59,14 +61,70 @@
             >
            
             </v-text-field>
+                </v-col>
+                <v-col>
+                    <v-btn fab color="primary" @click="sendChat">
+                        <v-icon>mdi-arrow-right</v-icon>
+                    </v-btn>
+                </v-col>
+            </v-row>
+          
             
         </v-container>
     </v-form>   
  </div>
 </template>
 <script>
+import UserChatCard from "./UserChatCard"
+import { db } from '../firebaseapp';
 export default {
-    name:"Chat room"
+    data : ()=>({
+        roomName  : "",
+        key : "",
+        message2 :"",
+        chats  :[],
+        username : ""
+    }),
+    components : {
+        UserChatCard
+    },
+    mounted: function () {
+  window.setInterval(() => {
+    this.getChats()
+  }, 1000)
+},
+    methods  : {
+        sendChat : function(){
+            db.ref("rooms").child(this.key).child("chats").push({
+                "message" : this.message2,
+                "sent_by"  : this.$store.state.user.username
+            })
+            this.message2 ="";
+            this.getChats();
+
+        },
+        getChats : async function(){
+            console.log(this.$store.state.user.username);
+            if(this.key==undefined)
+            console.log(undefined) 
+            else  
+        this.chats = (await db.ref("rooms").child(this.key).child("chats").once('value')).val()
+
+        }
+    },
+   async  created(){
+       console.log(db);
+       this.username = this.$store.state.user.username;
+        this.roomName = this.$route.params.name;
+        let snapshot =  await db.ref("rooms").once('value');
+        snapshot.forEach((chilSnapshot)=>{
+            if(chilSnapshot.val().name=== this.roomName)
+            {this.key = chilSnapshot['key'];
+            }
+        });
+        this.getChats();
+    },
+   
 }
 </script>
 <style scoped>

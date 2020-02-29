@@ -9,6 +9,7 @@ import Landing from './components/Landing';
 import UserRegistration from './components/UserRegistration'
 import UserDashboard from './components/UserDashboard';
 import { rtdbPlugin } from "vuefire";
+import AdminDashboard from "./components/AdminDashboard"
 Vue.use(rtdbPlugin);
 import ChatRoom from './components/ChatRoom'
 import 'material-design-icons-iconfont/dist/material-design-icons.css' 
@@ -26,6 +27,9 @@ const  routes = [
     },
     {
       path :"/chatroomslist",component : ChatRoomsList
+    },
+    {
+      path:"/admindashboard",component : AdminDashboard
     },
     {
       path : "/UserDashboard", component : UserDashboard

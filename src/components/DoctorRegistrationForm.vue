@@ -1,5 +1,6 @@
 <template>
 <v-container class="pa-5">
+  
         <v-form>
              <div class="py-6 " align=center style="font-size:30px; font-color:#32c788" >
           Enter Details 

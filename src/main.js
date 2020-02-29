@@ -6,8 +6,9 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure
 
 import DoctorsRegistration from './components/DoctorRegistrationForm'
 import Landing from './components/Landing';
+import UserRegistration from './components/UserRegistration'
 const  routes = [
-    { path: "/", component: DoctorsRegistration },
+    { path: "/", component: UserRegistration },
     {
       path: "/doctorsregistrations",
       component: DoctorsRegistration,

@@ -16,7 +16,7 @@
       multiple
     >
     </v-select>
-         <v-text-field placeholder="Experience in years" outlined="" type="number" v-model="experience" required>
+         <v-text-field placeholder="Experience(in years)" outlined="" type="number" v-model="experience" required>
          </v-text-field>
      <v-text-field placeholder="Contact" outlined="" type="number" required v-model="contactno">
          
@@ -35,6 +35,8 @@
             accept="application/pdf"
             @change="onFilePicked"
           />
+                              <v-text-field placeholder="Password" outlined=""  v-model="password" type="password" />
+
                     <v-text-field placeholder="Additional Details" outlined=""  v-model="additionalDetails"/>
 
     <v-row justify="center">
@@ -65,6 +67,7 @@ export default {
       DocumentFileUrl: "",
       downloadUrl: "",
       contactno : "",
+      password : ""
        }),
     methods : {
          pickFile() {
@@ -103,6 +106,7 @@ export default {
               additionalDetails : mythis.additionalDetails,
               age : mythis.age,
               qualifications : mythis.selectedQualifications,
+              password : mythis.password,
               verified : false
 
             };

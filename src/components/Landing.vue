@@ -62,6 +62,11 @@
 <script>
 
 export default {
+    Name:"Landing Page",
+    components:{
+        Footer
+
+    },
     data : ()=> ({
     })
 }

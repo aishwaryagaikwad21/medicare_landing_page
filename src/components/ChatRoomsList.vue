@@ -20,6 +20,7 @@
 
                     <v-btn flat elevation="0" class="my-2" @click="chatDialog=true">Add A Chat Room</v-btn>
                     </v-list>
+<<<<<<< HEAD
                     <v-dialog v-model="chatDialog">
                         <v-card>
                             <v-card-title>Add a Chat Room</v-card-title>
@@ -32,6 +33,11 @@
                     </v-dialog>
                     </v-card>
                         
+=======
+                    <v-dialog v-model="chatDialog"></v-dialog>
+
+                                        </v-card>
+>>>>>>> 04c37e4095dceb69eae39876955b6f6c4e722d87
 </template>
 <script>
 import { db } from '../firebaseapp'

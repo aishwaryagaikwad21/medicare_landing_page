@@ -34,6 +34,7 @@
         <div v-for="index in 10" :key="index">
             <!-- senderhai -->
         <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
+            <div class="sender-name">name</div>
 
             jatinda.kjvdajsvasvkhasvads
             
@@ -41,8 +42,8 @@
 
         <!-- reciver -->
         <div class="receiver-box   ml-5 py-2 pr-5 pl-5"> 
+            <div class="receiver-name">name</div>
             djasldhaksgd
-            
             </div>
         </div>
     </div>
@@ -114,5 +115,9 @@ export default {
     text-align: left;
     border-radius: 20px;
     margin-right: 100% !important;
+}
+
+.sender-name{
+    text-align: left
 }
 </style>

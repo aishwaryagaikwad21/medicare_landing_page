@@ -45,7 +45,7 @@ export default {
     }),
     async created(){
             this.username = this.generateRandomUsername();
-        },
+            },
 
 
     methods : {

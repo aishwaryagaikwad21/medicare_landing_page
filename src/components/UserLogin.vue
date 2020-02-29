@@ -34,7 +34,7 @@ export default {
                 {
 
                     console.log("userid is ",mythis.userid);
-                mythis.$store.commit("SET_LOGGED_IN",true,mythis.userid);
+                mythis.$store.commit("SET_LOGGED_IN",false,"");
                 mythis.$store.commit("SET_USER",mythis.userid);
             //    console.log(childSnapshot['.key']);
                 mythis.$store.commit("SET_KEY",childSnapshot["key"])

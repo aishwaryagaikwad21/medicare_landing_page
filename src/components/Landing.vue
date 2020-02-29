@@ -3,8 +3,7 @@
 
         <div fluid class="topnavbar">
             <v-btn
-            class="register "
-
+            class="register primary-light"
             >
 
             </v-btn>
@@ -40,7 +39,6 @@
     </div>
 </template>
 <script>
-require('@/assets/styles/main.css')
 
 export default {
     data : ()=> ({
@@ -49,7 +47,8 @@ export default {
 }
 </script>
 
-<style src="@/assets/styles/mystyles.css" >
+<style >
+@import "../colors.css";
 
 .headerhai{
     height: 100%;

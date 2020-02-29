@@ -36,6 +36,14 @@ export default {
     data : ()=> ({
 
     }),
+    created(){
+        fetch("https://www.patientslikeme.com/medical_entities/search?term=pain&types[]=Condition").then((response)=>{
+            console.log(response);
+        });
+
+        },
+
+
     methods : {
         generateRandomUsername : function(){
             var len=6;

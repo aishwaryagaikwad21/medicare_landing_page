@@ -2,3 +2,12 @@
 {
     background-color: #32c788 !important;
 }
+.text-white
+{
+    color: white;
+}
+.removeMarginAndPadding{
+    padding : 0px;
+    margin: 0px;
+
+}

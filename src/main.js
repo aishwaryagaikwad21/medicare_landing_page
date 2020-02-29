@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router'
+import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure you are using css-loader
+
 import DoctorsRegistration from './components/DoctorRegistrationForm'
 import Landing from './components/Landing';
 const  routes = [

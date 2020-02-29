@@ -1,23 +1,43 @@
 <template>
     <div>
 
-        <div fluid class="topnavbar">
-            <v-btn
-            class="register "
+        <div fluid class="topnavbar ">
+          
 
-            >
 
-            </v-btn>
-            <v-btn 
-            class="loginbutton"
-            >
-                jaitn
-            </v-btn>
+                <v-btn
+                class="loginhai mr-10 mt-8"
+                color="#32c788"
+                x-large
+                depressed="True"
+                rounded="50%"
+                outlined
+                
+                >
+                    Login
+                </v-btn>
+
+                
+
+                  <v-btn 
+                class="loginhai mr-5 mt-8"
+                color="#32c788"
+                x-large
+                depressed="True"
+                rounded="50%"
+                text
+                >
+
+                
+                regsiter
+                </v-btn>
+
+              
         </div>  
     <v-container fluid class="white lighten-5 headerhai">
     <v-row >
       <v-col class="ml-8 mt-10">
-         <div class="text-left pl-8 " > 
+         <div class="text-left pl-8" > 
              <h1 class="title-help mt-8" >
                  MedInspire <br>
                  Helping Patients.
@@ -40,23 +60,22 @@
     </div>
 </template>
 <script>
-require('@/assets/styles/main.css')
 
 export default {
     data : ()=> ({
-
     })
 }
 </script>
 
-<style src="@/assets/styles/mystyles.css" >
+<style>
+@import "../colors.css";
 
 .headerhai{
     height: 100%;
 }
 
 .topnavbar{
-    height: 70px;
+    height: 100px;
 }
 .title-help{
     font-family: roboto;
@@ -70,7 +89,7 @@ export default {
 .title-pg{
     line-height: 30px;
     color: #a3a8b2;
-    width: 90%
+    width: 100%
     
 }
 
@@ -78,4 +97,19 @@ export default {
     height :600px;
 }
 
+
+
+/* navbar */
+
+.loginhai{
+    float: right;
+}
+
+
+/* btn */
+.loginhai{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+}
 </style>

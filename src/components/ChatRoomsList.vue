@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+    <v-card class="mt-5">
 
                     <v-list>
                               <v-subheader>Chat Rooms</v-subheader>

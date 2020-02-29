@@ -5,18 +5,19 @@
         <v-spacer>
 
         </v-spacer>
-        <v-btn icon class="mr-3">
+        <v-btn class="mr-3 post-button">
+            New Post
             <v-icon @click="dialog=true">mdi-plus</v-icon>
         </v-btn>
     </v-app-bar>
     <v-content class="removeMarginAndPadding">
         <v-container fluid class="removeMarginAndPadding" fill-height>
             <v-row>
-                <v-col cols="2">
-                    <v-card>
-                        <v-card-text>
-                            Filter Posts By 
-                        </v-card-text>
+                <v-col cols="2" class="ml-4 text-center mt-5">
+                    <v-card class="pt-4">
+                        
+                            <h2>Filter Posts By</h2> 
+                        
                         <v-list>
                             <v-list-item>
                                 <v-row>
@@ -27,8 +28,27 @@
                                 </v-row>
                             </v-list-item>
                         </v-list>
-                    </v-card>
+      
+        <h2 class="mx-auto">Sort by:</h2>
+
+        <v-overflow-btn
+          class="my-2"
+          :items="dropdown_edit"
+          label="Time Posted"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+        <v-overflow-btn
+          class="my-2"
+          :items="dropdown_edit"
+          label="Posted by Age"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+        
+                                </v-card>
                 </v-col>
+
                 <v-col cols="7" justify="center">
                     <UserPostCard v-for="post in posts" :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
                     </UserPostCard>
@@ -81,6 +101,11 @@
 {
     height: 100vh !important; 
 }
+.post-button{
+    background-color: red;
+    
+    border-radius: 10px !important;
+}
 </style>
 <script>
 import UserPostCard from './UserPostCard';
@@ -98,7 +123,19 @@ export default {
         symptomps : ["abcd","efgh","ijkl","rer"],
         selectedSymptomps : [],
         e7 :[],
-        posts : []
+        posts : [],
+        dropdown_font: ['Arial', 'Calibri', 'Courier', 'Verdana'],
+      dropdown_icon: [
+        { text: 'list', callback: () => console.log('list') },
+        { text: 'favorite', callback: () => console.log('favorite') },
+        { text: 'delete', callback: () => console.log('delete') },
+      ],
+      dropdown_edit: [
+        { text: '100%' },
+        { text: '75%' },
+        { text: '50%' },
+        { text: '25%' },
+        { text: '0%' },],
     }),
     methods : {
         post : function(){

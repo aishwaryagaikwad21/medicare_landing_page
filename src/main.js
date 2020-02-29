@@ -7,6 +7,10 @@ import ChatRoomsList from './components/ChatRoomsList';
 import DoctorsRegistration from './components/DoctorRegistrationForm'
 import Landing from './components/Landing';
 import UserRegistration from './components/UserRegistration'
+import UserDashboard from './components/UserDashboard';
+import { rtdbPlugin } from "vuefire";
+Vue.use(rtdbPlugin);
+
 const  routes = [
     { path: "/", component: UserRegistration },
     {
@@ -18,6 +22,9 @@ const  routes = [
     },
     {
       path :"/chatroomslist",component : ChatRoomsList
+    },
+    {
+      path : "/UserDashboard", component : UserDashboard
     }
   ];
 Vue.use(VueRouter)

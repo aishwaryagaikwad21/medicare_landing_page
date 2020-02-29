@@ -29,7 +29,7 @@
                 >
 
                 
-                regsiter
+                Register
                 </v-btn>
 
               
@@ -57,10 +57,11 @@
 
     </v-row>
   </v-container>
+  <Footer/>
     </div>
 </template>
 <script>
-
+import Footer from './Footer';
 export default {
     Name:"Landing Page",
     components:{

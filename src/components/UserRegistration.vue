@@ -9,10 +9,8 @@
         <v-text-field placeholder="Enter Name or Leave for random" label="UserName" :value="username" disabled>
         </v-text-field>
         
-        <v-text-field placeholder="Enter Age" label="Age" type=Number v-model="age">
-        </v-text-field>
-         <v-text-field placeholder="Password" label="Password" type="password" v-model="password">
-        </v-text-field>
+       <img src width height for cols in col.split("l"):
+       do
         <v-label>
             Gender
         </v-label> 

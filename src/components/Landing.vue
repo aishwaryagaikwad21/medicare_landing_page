@@ -2,7 +2,22 @@
     <div>
 
         <div fluid class="topnavbar ">
-            
+        
+
+
+        <div id="myModal" class="modal">
+                <div class="modal-content ">
+                    <div class="modal-header ">
+                    <span class="close " @click="hide()">&times;</span>
+
+                    <Doctor/>
+
+                </div>
+            </div>
+        </div>
+
+                
+
                 <img src="../assets/img/logo.png" alt="shit" class="logo-bet ">
                     <span class="logo-text-hai">
                         MedInspire
@@ -15,14 +30,8 @@
                 rounded="50%"
                 outlined
                 >
-                
-
-
-                <router-link class="header-link" to="/">
-                        login
-                    </router-link>
+                        login             
                 </v-btn>
-
                 
 
                   <v-btn 
@@ -32,12 +41,11 @@
                 depressed="True"
                 rounded="50%"
                 text
+                @click="show()"
                 >
 
                 
-                <router-link class="header-link" to="/doctorsregistrations" >
                 register
-                </router-link>
                 </v-btn>
 
               
@@ -66,22 +74,44 @@
     </v-row>
   </v-container>
   <Footer/>
+
+ 
+
     </div>
-    
+
 </template>
 <script>
 import Footer from './Footer'
+import Doctor from './DoctorRegistrationForm'
+
 export default {
     Name:"Landing Page",
     components:{
-        Footer
-
+        Footer,
+        Doctor
+      
     },
     data : ()=> ({
-    })
+        isHidden: false
+    }),
+    methods:{
+         show() {
+            var modal = document.getElementById("myModal");
+            modal.style.display="block"
+            
+        },
+        hide() {
+            var hideblock =document.getElementById("myModal");
+            hideblock.style.display="none"
+        }
+    }
 }
+
+
+
 </script>
 
+ 
 <style>
 @import "../assets/colors.css";
 
@@ -153,4 +183,68 @@ export default {
     font-size: 30px;
     color: grey;
 }
+
+
+
+/* codied code */
+.modal {
+
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #000;
+  float: right;
+  margin-right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
 </style>

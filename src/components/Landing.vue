@@ -66,6 +66,7 @@
     </v-row>
   </v-container>
     <Facilities />
+    <DoctorsHelp />
     <Footer />
     </div>
     
@@ -73,10 +74,11 @@
 <script>
 import Footer from './Footer'
 import Facilities from './Facilities'
+import DoctorsHelp from './DoctorsHelp'
 export default {
     Name:"Landing Page",
     components:{
-        Footer,Facilities
+        Footer,Facilities,DoctorsHelp
 
     },
     data : ()=> ({

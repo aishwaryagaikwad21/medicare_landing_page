@@ -1,7 +1,14 @@
 <template>
-<v-container>
+<v-container class="pa-5">
         <v-form>
-
+             <div class="py-6 " align=center style="font-size:30px; font-color:#32c788" >
+          Enter Details 
+        </div>
+<v-row justify="center" >
+ 
+    
+    </v-row>
+    
      <v-text-field placeholder="Name" outlined="" required v-model="name">
          
      </v-text-field>
@@ -115,6 +122,7 @@ export default {
           });
         }
       );
+
         },
         onFilePicked(e) {
       const files = e.target.files;

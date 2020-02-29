@@ -1,0 +1,26 @@
+<template>
+  
+</template>
+
+<script>
+export default {
+
+}
+   // register modal component
+      Vue.component("modal", {
+        template: "#modal-template"
+      });
+
+      // start app
+      new Vue({
+        el: "#app",
+        data: {
+          showModal: false
+        }
+      });
+   
+</script>
+
+<style>
+
+</style>

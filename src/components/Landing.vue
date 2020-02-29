@@ -57,14 +57,18 @@
 
     </v-row>
   </v-container>
+    <Facilities />
+    <Footer />
     </div>
+    
 </template>
 <script>
-
+import Footer from './Footer'
+import Facilities from './Facilities'
 export default {
     Name:"Landing Page",
     components:{
-        Footer
+        Footer,Facilities
 
     },
     data : ()=> ({
@@ -73,8 +77,7 @@ export default {
 </script>
 
 <style>
-@import "../colors.css";
-
+@import "../colors.css"; 
 .headerhai{
     height: 100%;
 }

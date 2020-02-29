@@ -1,7 +1,7 @@
 <template>
-    <v-card>
+   <v-card>
 
-                    <v-list>
+                  <v-list>
                               <v-subheader>Chat Rooms</v-subheader>
                                             <div v-for="room in rooms" :key="room.name">
 
@@ -20,12 +20,10 @@
 
                     <v-btn flat elevation="0" class="my-2" @click="chatDialog=true">Add A Chat Room</v-btn>
                     </v-list>
-<<<<<<< HEAD
                     <v-dialog v-model="chatDialog"></v-dialog>
 
                                         </v-card>
-=======
-<<<<<<< HEAD
+
                     <v-dialog v-model="chatDialog">
                         <v-card>
                             <v-card-title>Add a Chat Room</v-card-title>
@@ -36,14 +34,12 @@
                             </v-container>
                         </v-card>
                     </v-dialog>
-                    </v-card>
-                        
-=======
+                                            
                     <v-dialog v-model="chatDialog"></v-dialog>
 
-                                        </v-card>
->>>>>>> 04c37e4095dceb69eae39876955b6f6c4e722d87
->>>>>>> c5e7fc8c57cdfdc50e51bc71ba9e13ef7e2def98
+
+ </v-card>
+
 </template>
 <script>
 import { db } from '../firebaseapp'

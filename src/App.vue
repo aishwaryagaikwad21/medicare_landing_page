@@ -11,6 +11,7 @@
       <DoctorRegistrationForm/>
 
     </v-content>
+    <Footer />
   </v-app>
 </template>
 <style>
@@ -19,12 +20,12 @@
 </style>
 <script>
 import DoctorRegistrationForm from './components/DoctorRegistrationForm';
-
+import Footer from './components/Footer'
 export default {
   name: 'App',
 
   components: {
-    DoctorRegistrationForm
+    DoctorRegistrationForm,Footer
   },
 
   data: () => ({

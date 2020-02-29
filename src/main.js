@@ -4,14 +4,15 @@ import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router'
 import DoctorsRegistration from './components/DoctorRegistrationForm'
 import Landing from './components/Landing';
+import UserRegistration from './components/UserRegistration'
 const  routes = [
-    { path: "/", component: DoctorsRegistration },
+    { path: "/", component: UserRegistration },
     {
       path: "/doctorsregistrations",
       component: DoctorsRegistration,
     },
     {
-        path:"/landing",component : Landing 
+        path:"/landing",component : Landing,
     }
   ];
 Vue.use(VueRouter)

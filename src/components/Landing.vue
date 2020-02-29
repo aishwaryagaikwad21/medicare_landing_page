@@ -38,8 +38,8 @@
                 class="loginhai mr-10 mt-8"
                 color="#32c788"
                 x-large
-                depressed="True"
-                rounded="50%"
+                :depressed="true"
+                rounded
                 outlined
                 @click="show('ul')"
                 >
@@ -51,8 +51,8 @@
                 class="loginhai mr-5 mt-8"
                 color="#32c788"
                 x-large
-                depressed="True"
-                rounded="50%"
+                :depressed="true"
+                rounded
                 text
                 @click="show('ur')"
                 >
@@ -136,6 +136,8 @@ export default {
     data : ()=> ({
         isHidden: false,
         displaycomponent:"",
+          depressed : true
+
 
     }),
     methods:{

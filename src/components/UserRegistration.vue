@@ -13,7 +13,7 @@
       <v-radio label="Female" value="radio-2"></v-radio>
       <v-radio label="Other" value="radio-3"></v-radio>
     </v-radio-group>
-
+    
     <v-label>
         Symptoms
         </v-label> 

@@ -22,7 +22,7 @@
                     </v-list>
                     <v-dialog v-model="chatDialog"></v-dialog>
 
-                                        </v-card>
+                </v-card>
 </template>
 <script>
 import { db } from '../firebaseapp'

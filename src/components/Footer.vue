@@ -1,6 +1,5 @@
 <template>
   <v-footer
-
     class="py-10"
   >
   <v-container fluid >

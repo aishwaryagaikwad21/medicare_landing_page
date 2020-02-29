@@ -2,9 +2,11 @@
     <div>
 
         <div fluid class="topnavbar ">
-          
-
-
+            
+                <img src="../assets/img/logo.png" alt="shit" class="logo-bet ">
+                    <span class="logo-text-hai">
+                        MedInspire
+                    </span>
                 <v-btn
                 class="loginhai mr-10 mt-8"
                 color="#32c788"
@@ -12,9 +14,13 @@
                 depressed="True"
                 rounded="50%"
                 outlined
-                
                 >
-                    Login
+                
+
+
+                <router-link class="header-link" to="/">
+                        login
+                    </router-link>
                 </v-btn>
 
                 
@@ -29,7 +35,9 @@
                 >
 
                 
-                regsiter
+                <router-link class="header-link" to="/doctorsregistrations" >
+                register
+                </router-link>
                 </v-btn>
 
               
@@ -77,7 +85,8 @@ export default {
 </script>
 
 <style>
-@import "../colors.css"; 
+@import "../assets/colors.css";
+
 .headerhai{
     height: 100%;
 }
@@ -86,7 +95,6 @@ export default {
     height: 100px;
 }
 .title-help{
-    font-family: roboto;
     font-weight: 700;
     font-size:50px;
     color:#232D42;
@@ -105,6 +113,18 @@ export default {
     height :600px;
 }
 
+/* footer-link */
+.header-link{
+    text-decoration: none;
+    color: #32C788 !important   ;
+}
+
+.header-link:hover{
+    text-decoration: none;
+    color: #32C788;
+}
+
+
 
 
 /* navbar */
@@ -118,6 +138,21 @@ export default {
 .loginhai{
     text-transform: capitalize;
     letter-spacing: 2px;
+}
 
+
+/* logobet */
+
+.logo-bet{
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+
+/* logo-text */
+
+.logo-text-hai{
+    font-size: 30px;
+    color: grey;
 }
 </style>

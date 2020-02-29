@@ -111,6 +111,7 @@
             </v-col>
         </v-row>
     </v-container>
+    <Community />
 
     <Footer />
     </div>
@@ -123,6 +124,7 @@ import Facilities from './Facilities'
 import UserRegister from './UserRegistration'
 import UserLogin from './UserLogin'
 import DoctorLogin from './DoctorLogin'
+import Community from './Community'
 export default {
     Name:"Landing Page",
     components:{
@@ -131,7 +133,8 @@ export default {
         Facilities,
         UserRegister,
         UserLogin,
-        DoctorLogin
+        DoctorLogin,
+        Community
     },
     data : ()=> ({
         isHidden: false,

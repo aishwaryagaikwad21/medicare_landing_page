@@ -1,7 +1,7 @@
 <template>
-    <v-card>
+    <v-card class="mt-5">
 
-                    <v-list>
+                  <v-list>
                               <v-subheader>Chat Rooms</v-subheader>
                                             <div v-for="room in rooms" :key="room.name">
 
@@ -22,7 +22,7 @@
                     </v-list>
                     <v-dialog v-model="chatDialog"></v-dialog>
 
-                                        </v-card>
+                </v-card>
 </template>
 <script>
 import { db } from '../firebaseapp'

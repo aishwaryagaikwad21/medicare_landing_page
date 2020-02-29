@@ -8,7 +8,7 @@
     >
     
 
-      <v-toolbar-title>Page title</v-toolbar-title>
+      <v-toolbar-title class="display-1">Chat Room </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -35,15 +35,14 @@
             <!-- senderhai -->
         <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
             <div class="sender-name">name :</div>
-
-            jatinda.kjvdajsvasvkhasvads
-            
+                
+                 <div class="real-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ea suscipit ullam vel itaque totam minima amet vero enim molestias. Architecto odit neque qui beatae exercitationem a fugiat illum fuga. </div>   
             </div>
 
         <!-- reciver -->
         <div class="receiver-box   ml-5 py-2 pr-5 pl-5"> 
             <div class="receiver-name">name :</div>
-            djasldhaksgd
+            <div class="real-message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia eos itaque hic corporis ipsam! Architecto ipsam exercitationem quas dignissimos unde provident. Molestias modi fugit illo? Officia est excepturi ipsa velit?</div>   
             </div>
         </div>
     </div>
@@ -95,26 +94,25 @@ export default {
     overflow-y: scroll;
     background-color: whitesmoke;
     overflow: auto;
-    padding-bottom: 30vh;
-    padding-bottom: 30vh;
-
+    padding-bottom: 20vh;
 }
 
 .sender-box{
 
     margin-top: 10px;
-    border: 2px solid#32C788;
+    max-width: 30%;
+    color: white;
     float: right;
     text-align: right;
     border-radius: 20px;
     margin-left: 100% !important;
-    color: white;
-    background-image:linear-gradient(#32C788);
-    
+    background-image: linear-gradient(to right, #32C788 0%, #38f9d7 100%);;
 }
 .receiver-box{
+    
+    max-width: 30%;
     margin-top: 10px;
-    border: 2px solid#32C788;
+    border: 1px solid #32C788;
     float: left;
     text-align: left;
     border-radius: 20px;
@@ -123,5 +121,12 @@ export default {
 
 .sender-name{
     text-align: left
+}
+
+.real-message{
+    text-align: center ;
+    display: flex;
+    margin-right: 100px;
+    width: 100%;
 }
 </style>

@@ -73,23 +73,22 @@
 
     </v-row>
   </v-container>
-  <Footer/>
-
- 
-
+    <Facilities />
+    <Footer />
     </div>
 
 </template>
 <script>
 import Footer from './Footer'
 import Doctor from './DoctorRegistrationForm'
+import Facilities from './Facilities'
 
 export default {
     Name:"Landing Page",
     components:{
         Footer,
-        Doctor
-      
+        Doctor,
+        Facilities
     },
     data : ()=> ({
         isHidden: false

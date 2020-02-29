@@ -20,9 +20,9 @@
 
                     <v-btn flat elevation="0" class="my-2" @click="chatDialog=true">Add A Chat Room</v-btn>
                     </v-list>
+                    <v-dialog v-model="chatDialog"></v-dialog>
 
                                         </v-card>
-                    <v-dialog v-model="chatDialog"></v-dialog>
 </template>
 <script>
 export default {

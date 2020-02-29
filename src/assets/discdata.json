@@ -1,0 +1,76 @@
+[{
+    "diseasename": "hypertensive disease",
+    "target": ["pain chest", "shortness of breath", "dizziness", "asthenia", "fall", "syncope", "vertigo", "sweat", "sweating increased", "palpitation", "nausea", "angina pectoris", "pressure chest"]
+}, {
+    "diseasename": "diabetes",
+    "target": ["polyuria", "polydypsia", "shortness of breath", "pain chest", "asthenia", "nausea", "orthopnea", "rale", "sweat", "sweating increased", "unresponsiveness", "mental status changes", "vertigo", "vomiting", "labored breathing"]
+}, {
+    "diseasename": "depression mental",
+    "target": ["feeling suicidal", "suicidal", "hallucinations auditory", "feeling hopeless", "weepiness", "sleeplessness", "motor retardation", "irritable mood", "blackout", "mood depressed", "hallucinations visual", "worry", "agitation", "tremor", "intoxication", "verbal auditory hallucinations", "energy increased", "difficulty", "nightmare", "unable to concentrate", "homelessness"]
+}, {
+    "diseasename": "depressive disorder",
+    "target": ["feeling suicidal", "suicidal", "hallucinations auditory", "feeling hopeless", "weepiness", "sleeplessness", "motor retardation", "irritable mood", "blackout", "mood depressed", "hallucinations visual", "worry", "agitation", "tremor", "intoxication", "verbal auditory hallucinations", "energy increased", "difficulty", "nightmare", "unable to concentrate", "homelessness"]
+}, {
+    "diseasename": "coronary arteriosclerosis",
+    "target": ["pain chest", "angina pectoris", "shortness of breath", "hypokinesia", "sweat", "sweating increased", "pressure chest", "dyspnea on exertion", "orthopnea", "chest tightness"]
+}, {
+    "diseasename": "coronary heart disease",
+    "target": ["pain chest", "angina pectoris", "shortness of breath", "hypokinesia", "sweat", "sweating increased", "pressure chest", "dyspnea on exertion", "orthopnea", "chest tightness"]
+}, {
+    "diseasename": "pneumonia",
+    "target": ["cough", "fever", "decreased translucency", "shortness of breath", "rale", "productive cough", "pleuritic pain", "yellow sputum", "breath sounds decreased", "chill", "rhonchus", "green sputum", "non-productive cough", "wheezing", "haemoptysis", "distress respiratory", "tachypnea", "malaise", "night sweat"]
+}, {
+    "diseasename": "failure heart congestive",
+    "target": ["shortness of breath", "orthopnea", "jugular venous distention", "rale", "dyspnea", "cough", "wheezing"]
+}, {
+    "diseasename": "accident\u00c2\u00a0cerebrovascular",
+    "target": ["dysarthria", "asthenia", "speech slurred", "facial paresis", "hemiplegia", "unresponsiveness", "seizure", "numbness"]
+}, {
+    "diseasename": "asthma",
+    "target": ["wheezing", "cough", "shortness of breath", "chest tightness", "non-productive cough", "pleuritic pain", "productive cough", "symptom aggravating factors", "distress respiratory"]
+}, {
+    "diseasename": "myocardial infarction",
+    "target": ["pain chest", "st segment elevation", "sweat", "sweating increased", "shortness of breath", "st segment depression", "hypokinesia", "angina pectoris", "pressure chest", "t wave inverted", "orthopnea", "rale", "chest tightness", "presence of q wave", "palpitation", "dyspnea", "chest discomfort", "bradycardia", "syncope"]
+}, {
+    "diseasename": "hypercholesterolemia",
+    "target": ["pain", "pain chest", "sweat", "sweating increased", "nonsmoker", "pressure chest", "syncope", "numbness", "chest discomfort", "shortness of breath", "st segment depression", "worry", "t wave inverted", "bradycardia", "dyspnea"]
+}, {
+    "diseasename": "infection",
+    "target": ["fever", "erythema", "decreased translucency", "hepatosplenomegaly", "chill", "pruritus", "diarrhea", "abscess bacterial", "swelling", "pain", "apyrexial", "cough"]
+}, {
+    "diseasename": "infection urinary tract",
+    "target": ["fever", "dysuria", "hematuria", "renal angle tenderness", "lethargy", "asthenia", "hyponatremia", "hemodynamically stable", "distress respiratory", "difficulty passing urine", "mental status changes", "consciousness clear"]
+}, {
+    "diseasename": "anemia",
+    "target": ["chill", "guaiac positive", "monoclonal", "ecchymosis", "tumor cell invasion", "haemorrhage", "pallor", "asthenia", "fatigue", "heme positive", "pain back", "orthostasis", "hyponatremia", "dizziness", "shortness of breath", "pain", "rhonchus", "arthralgia", "swelling", "transaminitis"]
+}, {
+    "diseasename": "chronic obstructive airway disease",
+    "target": ["shortness of breath", "wheezing", "cough", "dyspnea", "distress respiratory", "sputum purulent", "hypoxemia", "hypercapnia", "patient non compliance", "chest tightness"]
+}, {
+    "diseasename": "dementia",
+    "target": ["fever", "fall", "unresponsiveness", "lethargy", "agitation", "ecchymosis", "syncope", "rale", "unconscious state", "cough", "bedridden", "bedridden", "pain", "facial paresis", "abdominal tenderness", "rhonchus", "unsteady gait", "hallucinations auditory"]
+}, {
+    "diseasename": "insufficiency renal",
+    "target": ["shortness of breath", "hyperkalemia", "orthopnea", "rale", "urgency of\u00c2\u00a0micturition", "ascites", "guaiac positive", "asthenia", "apyrexial", "mental status changes", "dyspnea", "difficulty", "diarrhea", "hypotension", "breath sounds decreased", "swelling", "hypokinesia"]
+}, {
+    "diseasename": "confusion",
+    "target": ["seizure", "enuresis", "lethargy", "speech slurred", "fall", "consciousness clear", "mental status changes", "asterixis", "unconscious state", "agitation", "muscle twitch", "asthenia", "sleepy", "dizziness", "headache", "dysarthria", "lightheadedness", "tremor", "hyponatremia", "unresponsiveness"]
+}, {
+    "diseasename": "degenerative\u00c2\u00a0polyarthritis",
+    "target": ["pain", "food intolerance", "numbness of hand", "general discomfort", "drowsiness", "asthenia", "nonsmoker", "non-productive cough", "polydypsia", "stiffness", "unsteady gait"]
+}, {
+    "diseasename": "hypothyroidism",
+    "target": ["shortness of breath", "prostatism", "drowsiness", "sleepy", "hyponatremia", "fall", "unsteady gait", "polyuria", "hypotension", "difficulty", "syncope", "nightmare", "speech slurred", "weight gain", "asthenia", "fatigue", "tired", "agitation", "mental status changes", "motor retardation", "vomiting", "numbness", "mass of body structure"]
+}, {
+    "diseasename": "anxiety state",
+    "target": ["worry", "feeling suicidal", "suicidal", "sleeplessness", "feeling hopeless", "irritable mood", "tremor", "blackout", "weepiness", "has religious belief", "nervousness", "hallucinations visual", "formication", "difficulty", "pain chest", "patient non compliance", "agitation", "palpitation", "hallucinations auditory", "mood depressed", "hot flush", "pain", "consciousness clear", "nightmare"]
+}, {
+    "diseasename": "malignant neoplasms",
+    "target": ["pain", "mass of body structure", "lesion", "cushingoid facies", "cushingoid\u00c2\u00a0habitus", "emphysematous change", "decreased body weight", "ascites", "hoarseness", "thicken", "hematuria"]
+}, {
+    "diseasename": "primary malignant neoplasm",
+    "target": ["pain", "mass of body structure", "lesion", "cushingoid facies", "cushingoid\u00c2\u00a0habitus", "emphysematous change", "decreased body weight", "ascites", "hoarseness", "thicken", "hematuria"]
+}, {
+    "diseasename": "acquired\u00c2\u00a0immuno-deficiency syndrome",
+    "target": ["fever", "night sweat", "spontaneous rupture of membranes", "cough"]
+}]

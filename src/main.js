@@ -9,7 +9,7 @@ import Landing from './components/Landing';
 import UserDashboard from './components/UserDashboard';
 import { rtdbPlugin } from "vuefire";
 import store from "./store";
-
+import DoctorsDashboard from './components/DoctorsDashboard';
 import AdminDashboard from "./components/AdminDashboard"
 Vue.use(rtdbPlugin);
 import ChatRoom from './components/ChatRoom'
@@ -36,6 +36,9 @@ const  routes = [
     },
     {
       path : "/ChatRooms/:name", component : ChatRoom
+    },
+    {
+      path :"/DoctorsDashboard", component : DoctorsDashboard
     }
   ];
 Vue.use(VueRouter)

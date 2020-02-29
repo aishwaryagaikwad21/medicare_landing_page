@@ -28,19 +28,7 @@
     </v-app-bar>
 
     <div  class="message-text  mt-12 ">
-          <!-- <li v-for="index in 10" :key="index">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, modi quia deserunt ratione molestias rem nesciunt, accusamus id reprehenderit porro, eveniet nobis dolor nihil mollitia odit doloribus pariatur quos.</div>
-        </li> -->
-        <!-- <div v-for="index in 10" :key="index"> -->
-            <!-- senderhai -->
-        <!-- <div  class="sender-box mr-5 py-2 pr-5 pl-5 ">
-            <div class="sender-name">name :</div>
-                
-                 <div class="real-message"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed ea suscipit ullam vel itaque totam minima amet vero enim molestias. Architecto odit neque qui beatae exercitationem a fugiat illum fuga. </div>   
-            </div> -->
-
-        <!-- reciver -->
-       
+    
         <div v-for="chat in chats" :key="chat.message">
                         
             <UserChatCard :sent_by="chat.sent_by" :message="chat.message" :username="username"/>

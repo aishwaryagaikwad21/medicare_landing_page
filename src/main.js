@@ -10,9 +10,13 @@ import UserRegistration from './components/UserRegistration'
 import UserDashboard from './components/UserDashboard';
 import { rtdbPlugin } from "vuefire";
 Vue.use(rtdbPlugin);
+import ChatRoom from './components/ChatRoom'
+import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 
 const  routes = [
     { path: "/", component: UserRegistration },
+    { path: "/chatroom", component: ChatRoom},
+   
     {
       path: "/doctorsregistrations",
       component: DoctorsRegistration,

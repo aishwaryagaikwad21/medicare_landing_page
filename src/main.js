@@ -11,7 +11,7 @@ const  routes = [
       component: DoctorsRegistration,
     },
     {
-        path:"/landing",component : Landing 
+        path:"/landing",component : Landing,
     }
   ];
 Vue.use(VueRouter)

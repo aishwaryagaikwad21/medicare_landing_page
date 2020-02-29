@@ -1,5 +1,5 @@
 <template>
-   <v-card>
+    <v-card class="mt-5">
 
                   <v-list>
                               <v-subheader>Chat Rooms</v-subheader>
@@ -23,23 +23,6 @@
                     <v-dialog v-model="chatDialog"></v-dialog>
 
                                         </v-card>
-
-                    <v-dialog v-model="chatDialog">
-                        <v-card>
-                            <v-card-title>Add a Chat Room</v-card-title>
-                            <v-container>
-                                <v-text-field placeholder="Chat Room Name" outlined label="Chat Room Name" v-model="chatRoomName"></v-text-field>
-                                <v-text-field placeholder="Short Description" outlined label="Description" v-model="chatRoomDescription"></v-text-field>
-                                <v-btn flat color="primary" @click="createRoom">Create</v-btn>
-                            </v-container>
-                        </v-card>
-                    </v-dialog>
-                                            
-                    <v-dialog v-model="chatDialog"></v-dialog>
-
-
- </v-card>
-
 </template>
 <script>
 import { db } from '../firebaseapp'

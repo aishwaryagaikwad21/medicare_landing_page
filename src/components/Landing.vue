@@ -83,13 +83,13 @@
 import Footer from './Footer'
 import Doctor from './DoctorRegistrationForm'
 import Facilities from './Facilities'
-
+import DoctorsHelp from './DoctorsHelp'
 export default {
     Name:"Landing Page",
     components:{
         Footer,
         Doctor,
-        Facilities
+        Facilities,DoctorsHelp
     },
     data : ()=> ({
         isHidden: false

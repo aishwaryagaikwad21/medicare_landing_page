@@ -10,8 +10,20 @@
                     <div class="modal-header ">
                     <span class="close " @click="hide()">&times;</span>
 
-                    <Doctor/>
-
+                    <div v-if="this.displaycomponent == 'ul'">
+                        <UserLogin/>
+                    
+                        </div>
+                        <div v-if="this.displaycomponent == 'ur'">
+                    <UserRegister/>
+                        </div>
+                    <div v-if="this.displaycomponent == 'dl'">
+                    <DoctorLogin/>
+                        </div>
+                    <div v-if="this.displaycomponent == 'dr'">
+                    <DoctorRegister/>
+                        </div>
+                    
                 </div>
             </div>
         </div>
@@ -20,7 +32,7 @@
 
                 <img src="../assets/img/logo.png" alt="shit" class="logo-bet ">
                     <span class="logo-text-hai">
-                        MedInspire
+                        Medinspire
                     </span>
                 <v-btn
                 class="loginhai mr-10 mt-8"
@@ -29,6 +41,7 @@
                 depressed="True"
                 rounded="50%"
                 outlined
+                @click="show('ul')"
                 >
                         login             
                 </v-btn>
@@ -41,7 +54,7 @@
                 depressed="True"
                 rounded="50%"
                 text
-                @click="show()"
+                @click="show('ur')"
                 >
 
                 
@@ -74,30 +87,62 @@
     </v-row>
   </v-container>
     <Facilities />
-    <DoctorsHelp />
+    
+          <v-container fluid >
+        <v-row>
+            <v-col>
+                <v-container fluid class="pl-10">
+                        <h1>Doctors help us by registering yourself with us!</h1>
+                        <p>Helping other fellow patiennts is easy just register yourself and help the fellow patients! <br>
+                        </p>
+                        <div class="d-flex">
+                            <v-btn x-large class="doctor-register mr-10 ml-auto" @click="show('dl')" >
+                            <pre> Login </pre>
+                            </v-btn>
+
+                            <v-btn x-large class="doctor-register ml-10 mr-auto" @click="show('dr')" >
+                                    Register
+                            </v-btn>
+                        </div>
+                </v-container>
+            </v-col>
+            <v-col>
+                <v-img src="../assets/img/doctorshelp.png" aspect-ratio="2" contain></v-img>
+            </v-col>
+        </v-row>
+    </v-container>
+
     <Footer />
     </div>
 
 </template>
 <script>
 import Footer from './Footer'
-import Doctor from './DoctorRegistrationForm'
+import DoctorRegister from './DoctorRegistrationForm'
 import Facilities from './Facilities'
-import DoctorsHelp from './DoctorsHelp'
+import UserRegister from './UserRegistration'
+import UserLogin from './UserLogin'
+import DoctorLogin from './DoctorLogin'
 export default {
     Name:"Landing Page",
     components:{
         Footer,
-        Doctor,
-        Facilities,DoctorsHelp
+        DoctorRegister,
+        Facilities,
+        UserRegister,
+        UserLogin,
+        DoctorLogin
     },
     data : ()=> ({
-        isHidden: false
+        isHidden: false,
+        displaycomponent:"",
+
     }),
     methods:{
-         show() {
+         show(type) {
             var modal = document.getElementById("myModal");
             modal.style.display="block"
+            this.displaycomponent=type
             
         },
         hide() {
@@ -245,6 +290,22 @@ export default {
 }
 
 
+
+/* doctor login register */
+.doctor-login{
+    border:1px solid #32C788;
+    color:  #32C788 !important;
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 10%; 
+    text-decoration: none;
+}
+.doctor-register{
+    background-image: linear-gradient(to right, #32C788 0%, #38f9d7 100%);
+    color:white !important;
+    font-size: 30px;
+    text-decoration: none;
+}
 
 
 </style>

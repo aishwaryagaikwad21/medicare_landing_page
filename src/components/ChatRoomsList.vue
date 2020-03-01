@@ -110,7 +110,7 @@ export default {
         chatRoomName : "",
         rooms : [],
         room : [],
-        addDialog : true,
+        addDialog : false,
         filteredRooms : [],
         userRooms : [],
         roomDialog : false

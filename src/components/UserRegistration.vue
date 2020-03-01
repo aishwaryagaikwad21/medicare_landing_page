@@ -1,12 +1,19 @@
 <template>
     <v-container>
+        <div class="logo-text-hai my-5" align=center>
+    <img src='../assets/img/logo.png' width=200px height=80px alt=Medinspire class='logo-login' align=center> 
+        <div>
+            Medinspire
+        </div>
+    </div>
         <v-text-field placeholder="Enter Name or Leave for random" label="UserName" :value="username" disabled>
         </v-text-field>
         
         <v-text-field placeholder="Enter Age" label="Age" type=Number v-model="age">
         </v-text-field>
          <v-text-field placeholder="Password" label="Password" type="password" v-model="password">
-        </v-text-field>
+        </v-text-field> 
+       
         <v-label>
             Gender
         </v-label> 

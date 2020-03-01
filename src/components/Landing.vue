@@ -65,15 +65,17 @@
         </div>  
     <v-container fluid class="white lighten-5 headerhai">
     <v-row >
-      <v-col class="ml-8 mt-10">
+      <v-col class="ml-8 mt-10" style="vertical-align: middle">
          <div class="text-left pl-8" > 
              <h1 class="title-help mt-8" >
-                 MedInspire <br>
+                 Medinspire <br>
                  Helping Patients.
              </h1>
 
-             <p class="title-pg mt-5">
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est incidunt necessitatibus vel in corrupti quibusdam eveniet velit quas omnis reprehenderit iusto ullam consequatur, recusandae blanditiis quod magnam. <br> Aperiam, quis autem!
+             <p class="title-pg mt-5" >
+                  A portal where experience becomes Doctor. <br> <br>
+                 Get to Know and talk to similiar people on Medinspire and learn from there experiences!
+                Become a Community!                
              </p>
          </div>
       </v-col>
@@ -88,15 +90,17 @@
   </v-container>
     <Facilities />
     
-          <v-container fluid >
+          <v-container fluid class="ml-8" >
         <v-row>
             <v-col>
                 <v-container fluid class="pl-10">
-                        <h1>Doctors help us by registering yourself with us!</h1>
-                        <p>Helping other fellow patiennts is easy just register yourself and help the fellow patients! <br>
+                        <h1 class="title-help" style="font-size:40px">Help our community grow by joining as a Doctor, we need your help!</h1>
+                        <br>
+                        <p class="title-pg">Help other fellow patients <br> by registering yourself 
                         </p>
+                        <br>
                         <div class="d-flex">
-                            <v-btn x-large class="doctor-register mr-10 ml-auto" @click="show('dl')" >
+                            <v-btn x-large class="doctor-register mr-10 " @click="show('dl')" >
                             <pre> Login </pre>
                             </v-btn>
 
@@ -186,7 +190,8 @@ export default {
 .title-pg{
     line-height: 30px;
     color: #a3a8b2;
-    width: 100%
+    width: 100%;
+    font-size:27px;
     
 }
 

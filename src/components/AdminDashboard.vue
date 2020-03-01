@@ -29,30 +29,19 @@
             </v-row>
 
             </v-card>
-            <v-card class="mt-10">
+            <v-card class="mt-10" v-for="doctor in unverifiedDoctors" :key="doctor.contactno">
                 <v-row>
-                    <h1 class="ml-5">Account Authorization</h1>
+                    <h1 class="ml-5">{{doctor.name}}</h1>
                     <v-container fluid class="px-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ratione officia sed nulla a nesciunt! Ipsa temporibus 
+                        <v-row>
+                            <v-btn text @click="()=> downloadCertificate(doctor)">Download Certificate</v-btn>
+                                                        <v-btn text @click="()=>verifyDoctor(doctor)">Verify Doctor</v-btn>
+
+                        </v-row>
                     </v-container>
                 </v-row>
             </v-card>
-                        <v-card class="mt-10">
-                <v-row>
-                    <h1 class="ml-5">Account Authorization</h1>
-                    <v-container fluid class="px-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ratione officia sed nulla a nesciunt! Ipsa temporibus 
-                    </v-container>
-                </v-row>
-            </v-card>
-                        <v-card class="mt-10">
-                <v-row>
-                    <h1 class="ml-5">Account Authorization</h1>
-                    <v-container fluid class="px-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit earum ratione officia sed nulla a nesciunt! Ipsa temporibus 
-                    </v-container>
-                </v-row>
-            </v-card>
+            
 
     </v-col>
         <v-col>
@@ -74,7 +63,7 @@
     <v-dialog v-model="deleteRoom">
             <v-card>
                 <v-card-title>Delete Room </v-card-title>
-                <v-card-text>Are you sure you want tod delete room  : {{room.name }}</v-card-text>
+                <v-card-text>Are you sure you want to  delete room  : {{room.name }}</v-card-text>
                 <v-card-actions>
                       <v-btn
             color="red darken-1"
@@ -121,10 +110,32 @@
             </v-card-text>
         </v-card>
     </v-dialog>
+    <v-dialog v-model="verifyDialog"> 
+        <v-card>
+            <v-card-title>
+                <v-row>
+                    <v-col cols="11">
+                Verify Doctor
+
+                    </v-col>
+                <v-btn icon @click="verifyDialog=false"> <v-icon>mdi-close</v-icon></v-btn>
+                </v-row>
+
+            </v-card-title>
+            <v-card-actions>
+                <v-btn text color="red">
+                    No
+                </v-btn>
+                <v-btn text color="green" @click="verfyDoctorDb">
+                    Yes
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+    </v-dialog>
 </v-container>
 </template>
 <script>
-import {db} from '../firebaseapp';
+import {db,storage} from '../firebaseapp';
 export default {
     data:()=>({
             
@@ -135,16 +146,58 @@ export default {
             name : "",
             description : "" ,
             addDialog : false,
+            doctor : {},
             doctors : [],
-            deleteRoom : false
+            deleteRoom : false,
+            verifyDialog : false,
     }),
+    computed : {
+        unverifiedDoctors : function(){
+            let ud = this.doctors.filter((doctor)=>{
+                console.log(doctor)
+                if(doctor.verified === false)
+                return doctor;
+            })
+            console.log(ud);
+            return ud;
+        }
+    },
     methods : {
+        verfyDoctorDb : function()
+        {
+            db.ref("doctors").child(this.doctor[".key"]).child("verified").set(true);
+            this.verifyDialog = false;
+        },
+        verifyDoctor : function(doctor)
+        {
+            this.doctor  = doctor;
+            this.verifyDialog = true
+        },
         openDialog : function(room)
         {
             console.log(room);
             this.room = room;
             this.deleteRoom = true
         },
+        downloadCertificate : function(doctor){
+            console.log("mai chala");
+                  var httpreference = storage.refFromURL(doctor.link);
+      httpreference.getDownloadURL().then(function(url) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url);
+        xhr.responseType = "blob";
+        xhr.onload = function(event) {
+            console.log(event);
+          var blob = xhr.response;
+          var filename = "certificate"+".pdf";
+          var link = document.createElement("a");
+          link.href = window.URL.createObjectURL(blob);
+          link.download = filename;
+          link.click();
+        };
+        xhr.send();
+      });
+    },
         addRoom : function()
         {
             db.ref("rooms").push({

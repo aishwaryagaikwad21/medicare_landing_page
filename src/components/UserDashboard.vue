@@ -39,13 +39,13 @@
           editable
           item-value="text"
         ></v-overflow-btn>
-        <v-select :items="symptomps" multiple v-model="selectedSymptomps"></v-select>
+        <v-select :items="symptomps" multiple v-model="selectedSymptomps" label="Sort By Symptomps"></v-select>
         
                                 </v-card>
                 </v-col>
 
                 <v-col cols="7" justify="center">
-                    <UserPostCard v-for="post in sortedPosts" :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
+                    <UserPostCard v-for="post in sortedPosts"  :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
                     </UserPostCard>
                 </v-col>
                 
@@ -115,8 +115,25 @@ export default {
                     let reversedPosts  =[];
                     for(let i =this.posts.length-1;i>=0;i--)
                     reversedPosts.push(this.posts[i]);
+                    if(this.selectedSymptomps.length!=0)
+                    {
+                        let filteredPosts =[]; 
+                        for(let j=0;j<this.selectedSymptomps.length;j++)
+                        for(let i =0;i<reversedPosts.length;i++)
+                            {
+                                let post = reversedPosts[i];
+                                console.log("Hello"+post);
+                                if(post.symptomps.includes(this.selectedSymptomps[j]) && !filteredPosts.includes(post))
+                                filteredPosts.push(post);
+                            }
+                        return filteredPosts;
+                    }
+                else
                     return reversedPosts;
+
                 }
+                else
+
                 return this.posts;
             }
     },

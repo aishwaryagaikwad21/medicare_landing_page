@@ -35,7 +35,7 @@ export default {
                      this.$store.commit("SET_USER",child.name);
             //    console.log(childSnapshot['.key']);
                 this.$store.commit("SET_KEY",childSnapshot["key"])
-                this.$router.push(`/DoctorDashBoard`);
+                this.$router.push(`/DoctorsDashboard`);
 
               }
           })

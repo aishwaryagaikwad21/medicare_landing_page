@@ -21,9 +21,10 @@
                         <v-list>
                             <v-list-item>
                                 <v-row>
-                                    Age : {{posts.length}}
+                                    <!-- Age : {{posts.length}} -->
+                                    Age :34
                                     <input/>
-                                    <p>&lt; Age &gt; </p>
+                                   
                                     <v-text-field/>
                                 </v-row>
                             </v-list-item>
@@ -144,7 +145,7 @@ export default {
         user : "user3020",
         sortByTime : "Newest",
         dialog : false,
-        symptomps : ["Anxiety","Obesity","Allergies"],
+        symptomps : ["Anxiety","Headache","Pain","Breathing Difficulty","Epilepsy","Obesity","Allergies"],
         selectedSymptomps : [],
         e7 :[],
         posts : [],

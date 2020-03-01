@@ -16,18 +16,18 @@
                 <v-col cols="2" class="ml-4 text-center mt-5">
                     <v-card class="pt-4">
                         
-                            <h2>Filter Posts By</h2> 
+                           
                         
-                        <v-list>
+                        <!-- <v-list>
                             <v-list-item>
                                 <v-row>
-                                    Age : {{posts.length}}
+                                 <pre>   Age : 61</pre>
                                     <input/>
-                                    <p>&lt; Age &gt; </p>
+                                    <p> </p>
                                     <v-text-field/>
                                 </v-row>
                             </v-list-item>
-                        </v-list>
+                        </v-list> -->
       
         <h2 class="mx-auto">Sort by:</h2>
 

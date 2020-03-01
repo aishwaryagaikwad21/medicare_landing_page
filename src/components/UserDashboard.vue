@@ -128,7 +128,7 @@ export default {
         user : "user3020",
         sortByTime : "Newest",
         dialog : false,
-        symptomps : ["Anxiety","Obesity","Allergies"],
+        symptomps : ["Anxiety","Headache","Pain","Breathing Difficulty","Epilepsy","Obesity","Allergies"],
         selectedSymptomps : [],
         e7 :[],
         posts : [],

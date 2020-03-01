@@ -58,7 +58,7 @@
                 >
 
                 
-                register
+                register for free
                 </v-btn>
 
               
@@ -69,11 +69,10 @@
          <div class="text-left pl-8" > 
              <h1 class="title-help mt-8" >
                  Medinspire <br>
-                 Helping Patients.
+                <span style="font-size:35px;line-height:0px; letter-spacing: 0px;">  A portal where experience becomes Doctor.  </span>
              </h1>
 
              <p class="title-pg mt-5" >
-                  A portal where experience becomes Doctor. <br> <br>
                  Get to Know and talk to similiar people on Medinspire and learn from there experiences!
                 Become a Community!                
              </p>
@@ -183,7 +182,7 @@ export default {
     font-weight: 700;
     font-size:50px;
     color:#232D42;
-    line-height: 65px;
+    line-height: 50px;
     letter-spacing: 2px;
 }
 

@@ -10,7 +10,8 @@ import UserDashboard from './components/UserDashboard';
 import { rtdbPlugin } from "vuefire";
 import store from "./store";
 import DoctorsDashboard from './components/DoctorsDashboard';
-import AdminDashboard from "./components/AdminDashboard"
+import AdminDashboard from "./components/AdminDashboard";
+import AdminLogin from "./components/AdminLogin";
 Vue.use(rtdbPlugin);
 import ChatRoom from './components/ChatRoom'
 import 'material-design-icons-iconfont/dist/material-design-icons.css' 
@@ -39,6 +40,9 @@ const  routes = [
     },
     {
       path :"/DoctorsDashboard", component : DoctorsDashboard
+    },
+    {
+      path :"/AdminLogin", component : AdminLogin
     }
   ];
 Vue.use(VueRouter)

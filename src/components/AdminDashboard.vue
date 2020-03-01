@@ -7,7 +7,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon class="white--text">
+      <v-btn icon class="white--text" to="../landing">
         <v-icon>mdi-logout</v-icon>
       </v-btn>
     </v-toolbar>

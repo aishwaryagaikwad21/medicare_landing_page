@@ -33,7 +33,7 @@
           </v-list-item>
               <v-list-item>
             <v-list-item-content>
-              <v-list-item-title><router-link class="footer-link" to="/">About Us</router-link></v-list-item-title>
+              <v-list-item-title><router-link class="footer-link" to="/AdminDashboard">Admin Login</router-link></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
               </v-col>

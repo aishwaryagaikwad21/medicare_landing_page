@@ -7,7 +7,7 @@
         </v-col>
         <v-col cols="5" class="pt-10">
             <h1 class="community-header mt-10 color">Help each other,<br />Heal Together!</h1>
-            <p class="lead mt-5 title-pg">Get to Know and talk to similiar people on MedInpire and learn from there experiences!
+            <p class="lead mt-5 title-pg">Get to Know and talk to similiar people on Medinspire and learn from there experiences!
                 Become a Community!
             </p>
         </v-col>

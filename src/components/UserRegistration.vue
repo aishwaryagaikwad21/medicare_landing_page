@@ -6,7 +6,7 @@
             Medinspire
         </div>
     </div>
-        <v-text-field placeholder="Enter Name or Leave for random" label="UserName" :value="username" disabled>
+        <v-text-field placeholder="Enter Name or Leave for random" label="UserName" :value="username" >
         </v-text-field>
         
         <v-text-field placeholder="Enter Age" label="Age" type=Number v-model="age">

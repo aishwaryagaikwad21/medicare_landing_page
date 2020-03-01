@@ -7,14 +7,14 @@
        <v-col class="text-center">
            <img src="../assets/img/logo.png" alt="shit" class="logo-footer">
            <h3 class="mx-auto text-gray">Medinspire!</h3>
-           <h1 class="mt-6">ABOUT US</h1>
+           <h1 class="mt-6 text-primary">ABOUT US</h1>
            
-           <p>A Social media platform to get healthy</p>
-           <h3>CONTACT NO: 02142-554212</h3>
-           <h3>EMAIL:medinspireus@gmail.com</h3>
+           <p>A Social media platform to meet and know people with similiar illness.</p>
+           <h5>CONTACT NO: 02142-554212</h5>
+           <h5>EMAIL:medinspireus@gmail.com</h5>
        </v-col>
         <v-col class="text-center">
-          <h2 class="mb-10">Useful links</h2>
+          <h2 class="mb-10 text-primary">Useful links</h2>
             <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>
@@ -42,7 +42,7 @@
   <v-form v-model="valid">
     <v-container class="pt-0">
       <v-row class="pt-0">
-        <h2 class="ml-3">Subscribe to our Newsletter</h2>
+        <h2 class="ml-3 text-primary">Subscribe to our Newsletter</h2>
       </v-row>
       <v-row>
         <v-col
@@ -75,12 +75,18 @@
       </v-row>
     </v-container>
   </v-form>
-               <div class="text-center">
-          <v-btn outlined color="primary" dark>Subscribe</v-btn>
+      <div class="text-center">
+          <v-btn outlined class="primary-color" dark>Subscribe</v-btn>
         </div>
        </v-col>
     </v-row>
 
+
+  </v-container>
+  <v-container fluid class="dark--text text-center primary-background no-pad no-mar">
+          <v-card-text class="no-mar" background-color="#327c88">
+        {{ new Date().getFullYear() }} — <strong>BUGBUSTERS&copy;</strong>
+      </v-card-text>
 
   </v-container>
  
@@ -110,10 +116,30 @@
     text-decoration: none;
     color: black;
   }
+  .footer-link:hover{
+    text-decoration: none;
+    color: #32c788
+  }
+  .primary-background{
+    background-color: #32c788;
+  }
+  .primary-color{
+    color: #32c788;
+    border:1px solid #32c788;
+  }
   .logo-footer{
     height: 50px;
   }
   .text-gray{
     color:gray;
+  }
+  .text-primary{
+    color: #32c788;
+  }
+  .no-pad{
+    padding: 0px !important;
+  }
+  .no-mar{
+    margin: 0px !important;
   }
 </style>

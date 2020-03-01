@@ -65,6 +65,8 @@
             </v-col>
            
     </v-row>
+        <v-rating v-model="rating" ></v-rating>
+
         </v-container>
        
                     </v-card>
@@ -83,15 +85,17 @@ export default {
         ageFilter : ["Less Than 10","Le"],
         rooms : ["Corona Virus","Balzimer","JatinVirus","Punita Bacterial Infection"],
         username : "Anonymous",
-        comment : ""
+        comment : "",
     }),
     props : {
         description : String,
         symptoms : Array,
         comments : Object,
-        postKey : Object
+        postKey : Object,
+        rating : Number
     },
     methods : {
+    
         postComment : function(){
             let key = this.postKey['.key'];
             if(this.comment!="")

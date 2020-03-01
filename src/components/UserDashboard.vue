@@ -46,7 +46,7 @@
                 </v-col>
 
                 <v-col cols="7" justify="center">
-                    <UserPostCard v-for="post in sortedPosts"  :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
+                    <UserPostCard v-for="post in sortedPosts"  :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post" :rating="post.rating">
                     </UserPostCard>
                 </v-col>
                 

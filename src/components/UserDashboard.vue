@@ -160,7 +160,8 @@ export default {
             this.description="";
             this.e7 = []
             this.dialog =false;
-                    }
+                    } 
+                    
     },
     components : {
         UserPostCard,
@@ -170,6 +171,7 @@ export default {
     },
    firebase : {
     posts: db.ref("posts"),
+    
   },
 }
 </script>

@@ -33,7 +33,7 @@
                         <v-divider></v-divider>
                                             </div>
 
-                    <v-btn text elevation="0" class="my-2" @click="chatDialog=true">Add A Chat Room</v-btn>
+                    <v-btn text elevation="0" class="my-2" @click="addDialog=true">Add A Chat Room</v-btn>
                     </v-list>
                     <v-dialog v-model="roomDialog"
                 
@@ -72,6 +72,32 @@
                         </v-card-actions>
                     </v-card>
                     </v-dialog>
+                     <v-dialog v-model="addDialog">
+        <v-card>
+            <v-card-title>Add Rooms</v-card-title>
+            <v-card-text>
+                <v-text-field label="Room Name" v-model="chatRoomName">Room Name </v-text-field>
+                <v-text-field label="Short Description" v-model="chatRoomDescription">Short Description </v-text-field>
+                         <v-card-actions>
+                      <v-btn
+            color="red darken-1"
+            text
+            @click="addDialog = false"
+          >
+            Cancel
+          </v-btn>
+
+          <v-btn
+            color="green darken-1"
+            text
+            @click="createRoom"
+          >
+            Yes
+          </v-btn>
+                </v-card-actions>
+            </v-card-text>
+        </v-card>
+    </v-dialog>
                 </v-card>
 </template>
 <script>
@@ -84,6 +110,7 @@ export default {
         chatRoomName : "",
         rooms : [],
         room : [],
+        addDialog : true,
         filteredRooms : [],
         userRooms : [],
         roomDialog : false
@@ -113,7 +140,7 @@ export default {
             })
             this.chatRoomDescription="";
             this.chatRoomName="";
-            this.chatDialog= false;
+            this.addDialog= false;
             this.roomDialog = false;
 
 

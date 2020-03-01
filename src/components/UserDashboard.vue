@@ -35,23 +35,18 @@
         <v-overflow-btn
           class="my-2"
           :items="dropdown_edit"
+          v-model="sortByTime"
           label="Time Posted"
           editable
           item-value="text"
         ></v-overflow-btn>
-        <v-overflow-btn
-          class="my-2"
-          :items="dropdown_edit"
-          label="Posted by Age"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
+        <v-select :items="symptomps" multiple v-model="selectedSymptomps"></v-select>
         
                                 </v-card>
                 </v-col>
 
                 <v-col cols="7" justify="center">
-                    <UserPostCard v-for="post in posts" :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
+                    <UserPostCard v-for="post in sortedPosts" :key="post.key" :description="post.description" :symptoms="post.symptomps" :comments="post.comments" :postKey="post">
                     </UserPostCard>
                 </v-col>
                 
@@ -112,15 +107,28 @@
 import UserPostCard from './UserPostCard';
 import {db} from '../firebaseapp';
 import ChatRoomList from './ChatRoomsList';
-export default {
 
-    data : ()=> ({
+export default {
+    computed : {
+            sortedPosts : function(){
+                if(this.sortByTime == "Newest")
+                {
+                    let reversedPosts  =[];
+                    for(let i =this.posts.length-1;i>=0;i--)
+                    reversedPosts.push(this.posts[i]);
+                    return reversedPosts;
+                }
+                return this.posts;
+            }
+    },
+    data : ()=> ({  
         ageFilter : ["Less Than 10","Le"],
         comments : ["You should die","you shouldn't have gone to china"],
         username : "Anonymous",
         user : "user3020",
+        sortByTime : "Newest",
         dialog : false,
-        symptomps : ["abcd","efgh","ijkl","rer"],
+        symptomps : ["Anxiety","Obesity","Allergies"],
         selectedSymptomps : [],
         e7 :[],
         posts : [],
@@ -131,11 +139,9 @@ export default {
         { text: 'delete', callback: () => console.log('delete') },
       ],
       dropdown_edit: [
-        { text: '100%' },
-        { text: '75%' },
-        { text: '50%' },
-        { text: '25%' },
-        { text: '0%' },],
+        { text: 'Newest' },
+        { text: 'Oldest' },
+      ],
     }),
     created(){
     if(this.$store.state.user.loggedIn === false)

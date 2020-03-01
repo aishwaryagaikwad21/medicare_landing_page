@@ -1,6 +1,8 @@
 <template>
   <v-footer
-    class="py-10"
+    class="pt-10  pr-0 pl-0 pb-0"
+     
+   
   >
   <v-container fluid >
    <v-row justify="center" no-gutters>
@@ -83,7 +85,7 @@
 
 
   </v-container>
-  <v-container fluid class="dark--text text-center primary-background no-pad no-mar">
+  <v-container fluid class="dark--text text-center primary-background no-pad no-mar   ">
           <v-card-text class="no-mar" background-color="#327c88">
         {{ new Date().getFullYear() }} — <strong>BUGBUSTERS&copy;</strong>
       </v-card-text>

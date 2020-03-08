@@ -7,13 +7,13 @@
   <v-container fluid >
    <v-row justify="center" no-gutters>
        <v-col class="text-center">
-           <img src="../assets/img/logo.png" alt="shit" class="logo-footer">
-           <h3 class="mx-auto text-gray">Medinspire!</h3>
+           <img src="../assets/img/mindlogo.png" alt="shit" class="logo-footer">
+           <h3 class="mx-auto text-gray">MindCare!</h3>
            <h1 class="mt-6 text-primary">ABOUT US</h1>
            
-           <p>A Social media platform to meet and know people with similiar illness.</p>
+           <p>A Social media platform which will help you!</p>
            <h5>CONTACT NO: 02142-554212</h5>
-           <h5>EMAIL:medinspireus@gmail.com</h5>
+           <h5>EMAIL:mindcare@gmail.com</h5>
        </v-col>
         <v-col class="text-center">
           <h2 class="mb-10 text-primary">Useful links</h2>

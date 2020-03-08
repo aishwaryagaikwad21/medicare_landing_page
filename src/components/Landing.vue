@@ -30,9 +30,9 @@
 
                 
 
-                <img src="../assets/img/logo.png" alt="shit" class="logo-bet ">
+                <img src="../assets/img/mindlogo.png" alt="shit" class="logo-bet ">
                     <span class="logo-text-hai">
-                        Medinspire
+                        MindCare
                     </span>
                 <v-btn
                 class="loginhai mr-10 mt-8"
@@ -68,13 +68,12 @@
       <v-col class="ml-8 mt-10" style="vertical-align: middle">
          <div class="text-left pl-8" > 
              <h1 class="title-help mt-8" >
-                 Medinspire <br>
-                <span style="font-size:35px;line-height:0px; letter-spacing: 0px;">  A portal where experience becomes Doctor.  </span>
+                 MindCare <br>
+                <span style="font-size:35px;line-height:0px; letter-spacing: 0px;">  A portal for your mind  </span>
              </h1>
 
              <p class="title-pg mt-5" >
-                 Get to Know and talk to similiar people on Medinspire and learn from there experiences!
-                Become a Community!                
+                 Need Someone to talk? We are here!               
              </p>
          </div>
       </v-col>
@@ -93,9 +92,9 @@
         <v-row>
             <v-col>
                 <v-container fluid class="pl-10">
-                        <h1 class="title-help" style="font-size:40px">Help our community grow by joining as a Doctor, we need your help!</h1>
+                        <h1 class="title-help" style="font-size:40px">Help our community grow by joining as a Councelor, we need your help!</h1>
                         <br>
-                        <p class="title-pg">Help other fellow patients <br> by registering yourself 
+                        <p class="title-pg">Help people who are struggling all alone <br> by registering yourself 
                         </p>
                         <br>
                         <div class="d-flex">
@@ -172,7 +171,7 @@ export default {
 @import "../assets/colors.css";
 
 .headerhai{
-    height: 100%;
+    height: 20%;
 }
 
 .topnavbar{
